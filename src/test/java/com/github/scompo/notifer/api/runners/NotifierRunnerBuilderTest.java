@@ -1,22 +1,13 @@
 package com.github.scompo.notifer.api.runners;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import com.github.scompo.notifer.api.runners.commons.NotifierConfigurationTestImpl;
 
 public class NotifierRunnerBuilderTest {
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
 	public void testWith() {
