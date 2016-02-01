@@ -8,10 +8,6 @@ public class EventConsumerTestImpl extends AbstractEventConsumer {
 
 	private boolean calledDoAction = false;
 
-	public EventConsumerTestImpl() {
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
