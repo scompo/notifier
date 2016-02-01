@@ -13,20 +13,20 @@ import com.github.scompo.utils.startable.StartablesHelper;
 /**
  * A {@link NotifierConfiguration} where all {@link EventConsumer}s are consumers of all {@link EventProducer}s
  */
-public class AllConsumersListensToAllProducersNotifierConfiguration implements NotifierConfiguration {
+public class AllConsumersListenAllProducersNotifierConfiguration implements NotifierConfiguration {
 
 	private static final Logger logger = LoggerFactory
-			.getLogger(AllConsumersListensToAllProducersNotifierConfiguration.class);
+			.getLogger(AllConsumersListenAllProducersNotifierConfiguration.class);
 
-	private Collection<EventConsumer> eventConsumers;
+	private Collection<? extends EventConsumer> eventConsumers;
 
-	private Collection<EventProducer> eventProducers;
+	private Collection<? extends EventProducer> eventProducers;
 
-	public AllConsumersListensToAllProducersNotifierConfiguration(Collection<EventConsumer> eventConsumers,
-			Collection<EventProducer> eventSources) {
+	public AllConsumersListenAllProducersNotifierConfiguration(Collection<? extends EventConsumer> eventConsumers,
+			Collection<? extends EventProducer> eventProducers) {
 
 		this.eventConsumers = eventConsumers;
-		this.eventProducers = eventSources;
+		this.eventProducers = eventProducers;
 	}
 
 	@Override
@@ -51,7 +51,7 @@ public class AllConsumersListensToAllProducersNotifierConfiguration implements N
 		StartablesHelper.runStartables(getEventProducers());
 	}
 
-	public Collection<EventConsumer> getEventConsumers() {
+	public Collection<? extends EventConsumer> getEventConsumers() {
 
 		return eventConsumers;
 	}
@@ -61,7 +61,7 @@ public class AllConsumersListensToAllProducersNotifierConfiguration implements N
 		this.eventConsumers = eventConsumers;
 	}
 
-	public Collection<EventProducer> getEventProducers() {
+	public Collection<? extends EventProducer> getEventProducers() {
 		return eventProducers;
 	}
 

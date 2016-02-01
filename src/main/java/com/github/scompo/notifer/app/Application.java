@@ -16,7 +16,7 @@ public class Application {
 
 	private static NotifierConfiguration notifierConfiguration() {
 
-		NotifierConfiguration notifierConfiguration = new AllConsumersListensToAllProducersNotifierConfiguration(Arrays.asList(new TimerConsumer()),
+		NotifierConfiguration notifierConfiguration = new AllConsumersListenAllProducersNotifierConfiguration(Arrays.asList(new TimerConsumer()),
 				Arrays.asList(new CommandLineEventProducer()));
 
 		return notifierConfiguration;

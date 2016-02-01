@@ -1,10 +1,9 @@
 package com.github.scompo.notifer.api.runners.commons;
 
-import java.util.Date;
-
 import com.github.scompo.notifer.api.NotifierConfiguration;
 
 public class NotifierConfigurationTestImpl implements NotifierConfiguration {
+	
 	private long timeDoStart;
 
 	private long timeDoConfiguration;
@@ -12,13 +11,13 @@ public class NotifierConfigurationTestImpl implements NotifierConfiguration {
 	@Override
 	public void doStart() {
 
-		timeDoStart = new Date().getTime();
+		timeDoStart = System.nanoTime();
 	}
 
 	@Override
 	public void doConfiguration() {
 
-		timeDoConfiguration = new Date().getTime();
+		timeDoConfiguration = System.nanoTime();
 	}
 
 	public long getTimeDoStart() {

@@ -1,6 +1,7 @@
 package com.github.scompo.notifer.api.runners;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
@@ -29,5 +30,6 @@ public class NotifierRunnerImplTest {
 
 		assertNotNull(notifierConfiguration.getTimeDoConfiguration());
 		assertNotNull(notifierConfiguration.getTimeDoStart());
+		assertTrue(notifierConfiguration.getTimeDoConfiguration() < notifierConfiguration.getTimeDoStart());
 	}
 }
