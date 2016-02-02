@@ -87,8 +87,15 @@ public class AllConsumersListenAllProducersNotifierConfigurationTest {
 		testConf.doConfiguration();
 		testConf.doStart();
 		
-		consumers.forEach(x -> assertTrue(x.isStarted()));
-		producers.forEach(x -> assertTrue(x.isStarted()));
+		for (TestEventConsumer testEventConsumer : consumers) {
+			
+			assertTrue(testEventConsumer.isStarted());
+		}
+		
+		for (TestEventProducer testEventProducer : producers) {
+			
+			assertTrue(testEventProducer.isStarted());
+		}
 	}
 
 }
