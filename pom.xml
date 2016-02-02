@@ -42,7 +42,7 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.github.scompo.utils</groupId>
+			<groupId>com.github.scompo</groupId>
 			<artifactId>utils</artifactId>
 			<version>1.0.3</version>
 		</dependency>
