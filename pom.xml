@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.scompo</groupId>
+	<groupId>com.github.scompo.notifier.app</groupId>
 	<artifactId>notifier</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>notifier</name>
@@ -10,6 +10,23 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+
+	<licenses>
+		<license>
+			<name>BSD 3-Clause License</name>
+			<url>https://opensource.org/licenses/BSD-3-Clause</url>
+			<comments>see LICENSE.TXT</comments>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Mauro Scomparin</name>
+			<email>scompo@gmail.com</email>
+			<organization>Mauro Scomparin</organization>
+			<organizationUrl>https://github.com/scompo</organizationUrl>
+		</developer>
+	</developers>
 
 	<build>
 		<plugins>
@@ -43,8 +60,8 @@
 		</dependency>
 		<dependency>
 			<groupId>com.github.scompo</groupId>
-			<artifactId>utils</artifactId>
-			<version>master-SNAPSHOT</version>
+			<artifactId>notifier-api</artifactId>
+			<version>-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
