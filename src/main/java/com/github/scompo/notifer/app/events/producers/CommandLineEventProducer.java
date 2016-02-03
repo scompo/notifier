@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.time.ZonedDateTime;
 
 import com.github.scompo.notifer.api.events.Event;
-import com.github.scompo.notifer.api.events.EventImpl;
 import com.github.scompo.notifer.api.events.producers.AbstractEventProducer;
+import com.github.scompo.notifer.app.events.EventImpl;
 
 public class CommandLineEventProducer extends AbstractEventProducer implements Runnable {
 
